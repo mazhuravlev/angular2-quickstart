@@ -1,0 +1,9 @@
+<h2>About</h2>
+<button class="btn btn-primary" (click)="addPanel()">Add panel</button>
+<panel *ngFor="let panel of panels" [content]="'This is panel' + panel + 'from component'" title="About"
+       [showButton]="true" (buttonClicked)="panelButtonClicked(panel)"></panel>
+<div>
+    <ul>
+        <li *ngFor="let message of messages">{{message}}</li>
+    </ul>
+</div>
